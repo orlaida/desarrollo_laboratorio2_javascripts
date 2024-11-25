@@ -6,6 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+
+        let num1 = 10; // Declaración de variables
+        let num2 = 2;
+        
+        
+        function realizarOperacion(num1, num2) {
+            // Pido al usuario el tipo de operación
+            
+            let operacion = prompt("Ingresa la operacion a  realisar asi suma, resta, multiplicacion, division:");
+            let resultado;
+        
+            if (operacion === "suma") {
+                resultado = num1 + num2;
+            } else if (operacion === "resta") {
+                resultado = num1 - num2;
+            } else if (operacion === "multiplicacion") {
+                resultado = num1 * num2;
+            } else if (operacion === "division") {
+                if (num2 === 0) {
+                   document.write("Error: No se puede dividir entre cero");
+                    return; // Termina la función si la división es inválida
+                }
+                resultado = num1 / num2;
+            } else {
+                document.write("Operación no válida");
+                return; // Termina la función si la operación no es válida
+            }
+        
+            document.write("El resultado de la operación es: " + resultado);
+        }
+        
+        // Llamar a la función para realizar la operación
+        realizarOperacion(num1, num2, );
 </body>
 </html>
